@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- ctrl+/ -->
+    <!--  HTML 注释（用在 <head> 或 <body> 等标签外面 -->
+    <!--通过标签名来选择标签-->
+    <style>
+    /*  CSS 注释（用在 <style> 标签里面）*/
+        p{
+            color:blue;  /* 键值对 */
+            font-size:64px;
+            border:1px black solid;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 段落标签 -->
+    <p>这是我的第一个测试网页(what are you ding?Bro)</p>
+    <div></div>
+    
+
+    <script>
+// 创建轮播文字元素
+var div = document.createElement('div');
+div.innerText = '新学期加油!!!';
+div.style.position = 'fixed';
+div.style.top = '50px'; // 将轮播文字离网页顶部调整为50px
+div.style.left = '50%';
+div.style.transform = 'translateX(-50%)';
+div.style.fontSize = '32px';
+div.style.fontWeight = 'bold';
+div.style.color = 'blue';
+div.style.zIndex = '10000';
+document.body.appendChild(div);
+
+// 轮播效果
+var text = div.innerText;
+var index = 0;
+setInterval(function() {
+  div.innerText = text.slice(index) + text.slice(0, index);
+  index++;
+  if (index >= text.length) {
+    index = 0;
+  }
+}, 200);
+
+    </script>
+
+    
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8"> <!-- 单标签 -->
+    <!-- meta可以设置网页关键字、网页描述、网页作者、设置字符串、 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title> <!-- title对准标签页名称 -->
+    
+</head>
+<body>
+    <!-- <body>是双标签 -->
+
+    <!-- 属性和属性的值,也叫键值对 -->
+    <p align="center" style="" id="" name="">123</p>
+
+    <!-- 标题标签 -->
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <!-- 注意：
+    1.一个页面中只能使用一个<h1>标签,常常被用在网站的logo部分。
+    2.标题标签拥有明确的语义,初学者禁止仅仅使用标题标签设置文字加粗或更改文字的大小。
+    3.HTML不赞成使用标题标签的align对齐属性,可使用CSS样式设置。 -->
+
+
+    <!-- align=left/right/center -->
+    <h1 align="right">一级标题</h1><h2>二级标题</h2><h3>三级标题</h3>
+
+    <!-- 换行标签 -->
+    <p>1111111111<br> <!-- 换行 -->
+        1111111111 
+
+        1111111111<br><br> <!-- 换2行 -->
+        1111111111 
+
+    </p>
+
+    <!-- 水平线标签 -->
+    <hr size="5" color="red">
+
+    <!-- 文本样式标签 -->
+    <p><font color="blue" size="5">1111111111</font><br><br>
+        1111111111
+    </p>
+
+    <!-- 文本格式化标签 -->
+    <strong>加粗</strong>
+    <em>斜体</em>
+    <del>删除线</del>
+    <ins>下划线</ins>
+
+    <!-- 叠加 -->
+    <em><strong></strong></em>
+    <del><em><strong></strong></em>
+    <font color="blue"><ins><del><eM><strong>1111111111</strong></eM></del></ins></font>
+
+    <p><font color="blue" size="5">1111111111 &nbsp; &nbsp;</font>1111111111
+    </p>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="height:960px;">123<br>32</div>
+
+    <!-- 绝对路径 -->
+    <img src="http://127.0.0.1:5500/9.7/logo.png" alt="" > 
+    <!-- 绝对路径 -->
+    <img src="/image/logo.png" alt="">
+    <!-- 相对路径 -->
+    <img src="./logo.png" alt="">
+    <img src="./image/logo.png" alt="">
+    <!-- 上级目录 : ../ --><
+    img src="../image/logo.png" alt="">
+    <!-- 上上级目录 : ../ -->
+    <img src="../../image/logo.png" alt="">
+
+</body>
+</html>

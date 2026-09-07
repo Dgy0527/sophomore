@@ -1,0 +1,24 @@
+管理员 2026-09-07 15:17:32
+// 创建轮播文字元素
+var div = document.createElement('div');
+div.innerText = '新学期加油!!!';
+div.style.position = 'fixed';
+div.style.top = '50px'; // 将轮播文字离网页顶部调整为50px
+div.style.left = '50%';
+div.style.transform = 'translateX(-50%)';
+div.style.fontSize = '32px';
+div.style.fontWeight = 'bold';
+div.style.color = 'blue';
+div.style.zIndex = '10000';
+document.body.appendChild(div);
+
+// 轮播效果
+var text = div.innerText;
+var index = 0;
+setInterval(function() {
+  div.innerText = text.slice(index) + text.slice(0, index);
+  index++;
+  if (index >= text.length) {
+    index = 0;
+  }
+}, 200);
