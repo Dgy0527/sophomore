@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标签、类选择器</title>
+
+<style>
+    @font-face{
+    font-family:"新字体";
+    src:url("FZJZJW.TTF");
+}
+</style>
+
+
+<style>
+    p{
+        color:red;
+    }
+
+    .author{
+        color:blue;
+    }
+    /* 类名前面要加. */
+    .line3{
+        color:yellow;
+        font-size:36px;
+    }
+    /* 类名前面要加. */
+    .line4{
+        color:pink;
+    }
+
+    p{
+        /*font-size:40px;
+        font-family:宋体;
+        font-weight:900;
+        font-style:italic;*/
+        font:italic 900 40px 宋体;
+    }
+
+    p{
+        color:#0F0;
+        line-height:60px;
+    }
+
+</style>
+
+
+</head>
+
+<!-- -->
+<!-- -->
+
+<body>
+<h2>静夜思</h2>
+<p class="author">唐：李白</p>
+<p class="author">床前明月光，</p>
+<p class="line3">疑是地上霜。</p>
+<p id="line4">举头望明月，</p>
+<!-- id是唯一的 -->
+<p>低头思故乡。</p>
+</body>
+</html>

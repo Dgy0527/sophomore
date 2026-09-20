@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>复合选择器权重的叠加</title>
+<style type="text/css">
+     
+/*就近原则*/
+.c1 .c2 div {color:green;}	   /*0,2,1*/
+div #box3 { color:orange;}    /*1,0,1*/
+#box1 div { color:yellow;}  	/*1,0,1*/
+</style>						
+</head>
+<body>
+
+<div id="box1" class="c1">
+	<div id="box2" class="c2">
+    	<div id="box3" class="c3">
+			文本颜色是？
+        </div>
+    </div>
+</div>	
+
+
+</body>
+</html>
+
+ 

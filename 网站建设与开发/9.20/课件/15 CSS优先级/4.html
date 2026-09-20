@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>复合选择器权重的叠加</title>
+<style type="text/css">
+     
+
+p.c2 {color:green;}	/*0,1,1*/
+div p { color:red;}	/*0,0,2*/    
+#father { color:blue;} /**/  
+</style>
+</head>
+<body>
+
+<div id="father" class="c1">
+	<p class="c2">文本颜色是？</p>
+</div>	
+
+
+</body>
+</html>
+
