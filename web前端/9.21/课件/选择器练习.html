@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS选择器</title>
+<meta charset="UTF-8" />
+<style type="text/css" >
+	/* 为便于观察，给相关标签加上边框，并设置一些默认的样式 */
+	body,input{font-size:18px;}
+	input{border: 2px solid green;}
+	div,span,p{border: 2px solid red;font-size:18px;}
+	span{border-color: blue;margin-right:10px;}
+	div,p{ width:350px;height:80px;padding:5px;}
+
+
+
+
+
+
+
+
+	/* ----- 1.标签名选择器练习 -----
+	将所有span标签的背景颜色设置为#efbdef, 设置字体大小为22px，字体加粗；*/
+	span{
+		background-color: #efbdef;
+		font-size: 22px;
+		font-weight: bold;
+	}
+	
+
+
+
+
+
+
+
+
+	/* ----- 2.类选择器练习 -----
+	(1)将所有的span（但是不包括div和p标签下的span）的背景颜色设置为#faf77b；
+	(2)将div下的span和内容为"span111"的span，背景颜色设置为、字体颜色设置
+	#ec0e7e；*/
+
+	.S1{
+		background-color: #faf77b;
+	}
+	.s2{
+		color:#ec0e7e;
+
+	}
+
+
+
+
+	/* ----- 3.id选择器练习 -----
+	用id选择器将第一个p标签设置字体大小为24px，字体颜色为#a06649, 首行文本缩进20px。*/
+
+	#p1{
+		font-size:24px;
+		color:#a06649;
+		text-indent:20px;
+	}
+
+
+
+
+
+
+
+
+	/* ----- 4.后代选择器练习 -----
+	为p元素内部的所有span元素，设置字体大小为18px,字体颜色为红色,背景颜色为pink;*/
+	p span{
+		font-size: 18px;
+		font: red;
+		background-color: pink;
+	}
+
+
+
+
+
+
+	/* ----- 5.子代选择器练习 -----
+	为body元素的所有子span元素，设置字体加粗;*/
+	body>span{
+		font-weight:bold;
+	}
+
+
+
+
+	#p1 * {
+
+	}
+	#p1>* {
+
+	}
+	p span{
+		
+	}
+	
+
+
+</style>
+</head>
+<body>
+	<br/>
+	<div>
+		div111
+		<span>这是一个span</span>
+		这是一个div
+	</div> <br/>
+
+	<span class="s1 s2">span111</span>
+	<span class="s1">span222</span>
+	<span class="s1">span333</span>
+
+	<p>
+		ppp111
+		<span>这是一个span</span>
+		这是一个P元素
+	</p>
+	<p>
+		ppp222
+		<span>这是一个span</span>
+		这是一个P元素
+	</p>
+</body>
+</html>

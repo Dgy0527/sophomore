@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后代选择器</title>
+<style type="text/css">
+    /* 后代选择器 */
+    div p strong{
+
+    }
+    div strong{
+        color:red;
+    }
+
+    /* 子代选择器 */
+    div>strong{
+
+    }
+    div>p>strong{
+
+    }
+</style>
+</head>
+
+<body>
+    <div class="c2">
+        <p id="id1">段落文本
+            <strong class="c1">嵌套在段落中，使用strong标签定义的文本（红色）。</strong>
+        </p>
+        <strong>嵌套之外由strong标签定义的文本（蓝色）。</strong>
+    </div>
+
+    <div class="c2">
+        <p id="id1">段落文本
+            <strong class="c1">嵌套在段落中，使用strong标签定义的文本（红色）。</strong>
+        </p>
+        <strong>嵌套之外由strong标签定义的文本（蓝色）。</strong>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="./1.css">
+        <style>
+            p{
+                color:blue;
+                color:red;
+                font-size:64px;
+            }
+            div{
+                color:red;
+                font-size:64px;
+            }
+
+            div{
+                color:blue;
+                font-size:64px;
+            }
+
+            /* css优先级 */
+            /* 类选择器>标签选择器 */
+            /* id选择器>类选择器>标签选择器 */
+            /* 行内式>id选择器>类选择器>标签选择器 */
+            /* !important>行内式>id选择器>类选择器>标签选择器 */
+            #id1{
+                color:blue;
+            }
+            .p1{
+                color:green;
+            }
+            p{
+                color:red !important;
+            }
+
+        </style>
+       
+</head>
+<body>
+    <div style="height:640px; color:blue;">div</div>
+    <p id="p1" style="">123</p>
+    <P>123</P>
+    <div>1233333</div>
+
+    <p>123</p>
+    <p>234</p>
+    <h1>123</h1>
+    <div>123333</div>
+
+    <!-- 优先级 -->
+    <p style="color: pink;"id="id1" class="p1">123</p>
+</body>
+</html>

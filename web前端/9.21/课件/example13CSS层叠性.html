@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS层叠性</title>
+<style type="text/css">
+
+p{
+    color: red;
+    font-size:32px
+}
+
+p {
+    font: italic 64px "黑体";
+    color: green;
+    text-align: center;
+}
+
+    /* css的继承性 */
+    div{
+        color:red;
+        border: 1px solid black;
+        text-decoration: underline;
+        text-align:center;
+    }
+
+</style>
+</head>
+<body>
+<p>离离原上草，一岁一枯荣。</p>
+<p>野火烧不尽，春风吹又生。</p>
+
+    <div>
+        <p>离离原上草，一岁一枯荣。</p>
+        <p>野火烧不尽，春风吹又生。</p>
+    </div>
+    
+</body>
+</html>

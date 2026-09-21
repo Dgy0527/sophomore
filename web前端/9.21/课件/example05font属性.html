@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>font属性</title>
+<style type="text/css">
+    .one{
+         /* font-size设置字号，数字与单位px(像素)要连在一块,中间不能有空格 */
+        font-size:64px;
+        /* font-family设置字体字号 */
+        font-family:"楷体",'Times New Roman',Times,serif;
+        /* font-weight设置字体粗细 */
+        font-weight:lighter;    /*bold(700)、normal(400)*/
+        /* font-style设置字的样式,italic:斜体 */
+        font-style:italic;
+
+        /* font的综合设置先后顺序要注意,顺序不对解析不了 */
+        /* 顺序:style - variant - weight -size/line/height - family */
+        font:italic 400 64px/64px "楷体"
+
+        color:rgb(255,0,0);
+        line-height:18px;
+        text-decoration:underline;  /*line-through、overline*/
+        text-align:center;
+        background-color:blue;
+    }
+    .two{
+        font-size:24px;
+        /* text-indent用于设置首行文本的缩进 */
+        text-indent:32px; /*2em*/
+    }
+</style>
+</head>
+<body>
+<p class="one">段落1：使用font属性综合设置段落文本的字体风格、字号、行高和字体。
+     <img src="./icon.gif" alt="">
+</p>
+<p class="two">段落2：使用font属性综合设置段落文本的字体风格、字号和行高。由于省略了字体属性font-family，这时font属性不起作用。</p>
+</body>
+</html>
