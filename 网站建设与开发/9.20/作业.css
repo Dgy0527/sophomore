@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*CSS Document*/
+/*重置浏览器的默认样式*/
+*{margin:0;padding:0;}
+/*全局控制*/
+
+
+body{
+    background-color:rgb(237,237,237);
+    font-family:楷体;
+    font-size:16px;
+    color:#a5a5a5;
+}
+
+.header{
+    text-align:center;
+    margin:0 auto;
+    width:980px;
+    font-family:微软雅黑;
+    height:86px;
+    line-height:86px;
+}
+
+.header h1{
+    font-weight:normal;
+}
+
+.header h1 strong{
+    font-weight:normal;
+    font-size:30px;
+}
+
+.header font{
+    font-size:14px;
+}
+
+.fenlei{
+    margin:0 auto;
+    width:980px;
+}
+
+.fenlei h2{
+    font-size:14px;
+    font-family:微软雅黑;
+    color:#a5a5a5;
+    line-height:42px;
+    height:42px;
+}
+
+.fenlei p{
+    line-height:30px;
+    text-align:center;
+    font-size:18px;
+}
+
+.seller{
+    margin:0 auto;
+    width:602px;
+}
+
+.seller{
+    font-size:16px;
+    line-height:30px;
+    /* 两个字符的缩进 */
+    text-indent:2em;
+}
+
+.seller p font{
+    text-decoration:underline;
+}
+
+.shouhou{
+    margin:0 auto;
+    width:602px;
+    text-align:center;
+    font-weight:bold;
+    font-family:微软雅黑;
+    font-size:16px;
+}
+
+.boss{
+    margin:0 auto;
+    width:602px;
+}
+
+.boss h3 ,.boss p{
+    text-indent:2em;
+}
+
+.boss h3{
+    font-family:微软雅黑;
+    font-size:18px;
+    line-height:30px;
+    height:30px;
+    font-weight:normal;
+}
+
+.boss p {
+    font-family:italic;
+    font-size:14px;
+    line-height:26px;
+}
