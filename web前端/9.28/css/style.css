@@ -1,22 +1,28 @@
-*{
-    background-color:pink;
+
+body{
+    background-color:#ededed;
+    font-family:楷体;
+    font-size:16px;
+    color:#a5a5a5;
 }
 
-.body{
-
-}
 
 .fenlei{
-
+    height:60px;
+    width:980px;
+    margin:0 auto;
+    text-align:center;
+    line-height:60px;
 }
 
 .fenlei h2{
-
+    font-size:32px;
 }
 
 .fenlei p{
-
+    font-size:18px;
 }
+/*  */
 
 /* 热卖模块的样式设置 */
 #renmai{
@@ -25,6 +31,7 @@
 }
 
 #renmai p{
+    font-size:16px;
     font-family:"楷体";
     line-height:35px;
     text-indent:2em;
@@ -36,7 +43,7 @@
 
 /* 页脚模块的样式设置 */
 #footer{
-    width:605px;
+    width:600px;
     margin:0 auto;
 }
 
@@ -57,5 +64,6 @@
 
 #footer div p{
     line-height:30px;
-    
+    text-indent:20px;
+
 }
