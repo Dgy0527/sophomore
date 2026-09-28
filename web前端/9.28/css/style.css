@@ -6,8 +6,8 @@ body{
     color:#a5a5a5;
 }
 
-
-.fenlei{
+/*  */
+#title{
     height:60px;
     width:980px;
     margin:0 auto;
@@ -15,29 +15,49 @@ body{
     line-height:60px;
 }
 
-.fenlei h2{
+#title s1{
     font-size:32px;
 }
 
-.fenlei p{
+#title s2{
     font-size:18px;
 }
 /*  */
 
+/*  */
+.fenlei{
+    width:980px;
+    margin:0 auto;  
+}
+
+.fenlei h2{
+    font-size:20px;
+    height:35px;
+    line-height:50px;
+}
+
+
+.fenlei p{
+    text-align:center;
+    font-family:"楷体";
+    line-height:35px;
+}
+/*  */
+
 /* 热卖模块的样式设置 */
-#renmai{
-    width:905px;
+#remai{
+    width:600px;
     margin:0 auto;
 }
 
-#renmai p{
+#remai p{
     font-size:16px;
     font-family:"楷体";
     line-height:35px;
     text-indent:2em;
 }
 
-#remai span{
+#rmai span{
     text-decoration:underline;
 }
 
