@@ -18,12 +18,44 @@
 
 }
 
+/* 热卖模块的样式设置 */
 #renmai{
-
+    width:905px;
+    margin:0 auto;
 }
 
 #renmai p{
     font-family:"楷体";
     line-height:35px;
-    text-indent:"25"
+    text-indent:2em;
+}
+
+#remai span{
+    text-decoration:underline;
+}
+
+/* 页脚模块的样式设置 */
+#footer{
+    width:605px;
+    margin:0 auto;
+}
+
+#footer>p{
+    font-weight:bold;
+    text-align:center;
+}
+
+#footer img{
+    float:left;
+}
+
+#footer .p1{
+    font-family:"楷体";
+    font-style:italic;
+    font-size:14px;
+}
+
+#footer div p{
+    line-height:30px;
+    
 }
