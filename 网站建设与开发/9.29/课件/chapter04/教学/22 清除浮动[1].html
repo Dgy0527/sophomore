@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>子元素浮动对父元素的影响</title>
+<!--
+1. 为三个子元素添加浮动
+2. 清除浮动：使用空标签
+3. 清除浮动：使用overflow属性
+ -->
+<style type="text/css"> 
+.one,.two,.three{
+	
+	width:100px;
+	height:100px;
+	margin:10px;
+	background: red;
+}
+.box{
+	border:1px solid #ccc;
+	background: blue;
+}
+
+</style>
+</head>
+<body>
+<div>
+<div class="box">
+	<div class="one">div1</div>
+	<div class="two">div2</div>
+	<div class="three">div3</div>
+    
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+float:left;
+1. 
+.four {
+	clear: both;
+}
+<div class="four"></div>
+2. 
+.box {
+	overflow:hidden;
+}
+3. 
+ -->

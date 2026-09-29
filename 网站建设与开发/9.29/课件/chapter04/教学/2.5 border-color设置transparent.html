@@ -1,0 +1,26 @@
+<style>
+  .box {
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+
+  
+  .bad-example:hover {
+    border-bottom: 20px solid red; 
+  }
+
+  .good-example {
+    border-bottom: 20px solid transparent; /* 提前占位 */
+  }
+  .good-example:hover {
+    border-bottom-color: red; /* 只改颜色 */
+  }
+</style>
+
+<div class="box bad-example">悬停我（内容会跳动）</div>
+<br><br><br><br><br><br><br>
+<div class="box good-example">悬停我（布局很稳定）</div>
+<p>观察下方这段文字，在悬停第一个方块时是否被顶下去了？</p>
