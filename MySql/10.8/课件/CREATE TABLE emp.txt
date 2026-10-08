@@ -1,0 +1,9 @@
+CREATE TABLE emp(
+empno   INT PRIMARY KEY,
+ename   VARCHAR(20) UNIQUE NOT NULL,
+job     VARCHAR(20) NOT NULL,
+mgr     INT ,
+sal     DECIMAL(7,2),
+comm    DECIMAL(7,2),
+deptno  INT  
+) ;
