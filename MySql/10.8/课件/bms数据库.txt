@@ -1,0 +1,41 @@
+CREATE DATABASE bms;
+# 选择数据库
+USE bms;
+
+# 创建创建数据表user
+CREATE TABLE user  (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(20) NOT NULL UNIQUE,
+	state CHAR(1) NOT NULL DEFAULT 0
+);
+
+# 创建数据表record
+CREATE TABLE record  (
+  id INT  PRIMARY KEY AUTO_INCREMENT,
+  book_id INT NOT NULL,
+  borrower_id INT NOT NULL,
+  borrow_time DATETIME NOT NULL,
+  remand_time DATETIME NOT NULL
+);
+
+# 创建数据表book 
+CREATE TABLE book  (
+	id INT  PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(20) NOT NULL UNIQUE,
+	price DECIMAL(6, 2)  NOT NULL,
+	upload_time DATETIME NOT NULL,
+	borrower_id INT ,
+	borrow_time DATETIME,
+	state CHAR(1) NOT NULL DEFAULT 0
+);
+
+INSERT INTO book (name,price,upload_time,state)
+VALUES
+('三国演义',69.00,CURRENT_TIMESTAMP,2),
+('MySQL数据库入门',40.00,CURRENT_TIMESTAMP,0),
+('JavaWeb程序开发入门',49.00,CURRENT_TIMESTAMP,0),
+('西游记',59.00,CURRENT_TIMESTAMP,2),
+('红楼梦',33.00,CURRENT_TIMESTAMP,2),
+('水浒传',66.66,CURRENT_TIMESTAMP,2);
+
+
