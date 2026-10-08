@@ -1,0 +1,21 @@
+while True:
+    loan_count = float(input("请输入贷款的总额（万元：）"))
+    loan_year = int(input("请输入贷款的年限："))
+    loan_type = str(input("请选择贷款的方式（01：商业贷款，02：公积金贷款）："))
+    if loan_type == '01' and loan_year <= 5:
+        rate = 0.0475
+    elif loan_type == '01' and loan_year > 5:
+        rate = 0.049
+    elif loan_type == '02' and loan_year <= 5:
+        rate = 0.0275
+    elif loan_type == '02' and loan_year > 5:
+        rate = 0.0325
+
+    month_rate = rate / 12
+    month_money = loan_count * (month_rate * (1 + month_rate) ** (loan_year * 12)) / (
+            ((1 + month_rate) ** (loan_year * 12)) - 1)
+
+    # 贷款金额 × [月利率 × (1 + 月利率) ^ 还款月数] ÷ {[(1 + 月利率) ^ 还款月数] - 1}
+    print("每月还款总额为%.2f元" % (month_money * 10000))
+    print("还款总额为%.2f元" % (month_money * loan_year * 12 * 10000))
+    print("支付的利息为%.2f元," % ((month_money * loan_year * 12 - loan_count) * 10000))
