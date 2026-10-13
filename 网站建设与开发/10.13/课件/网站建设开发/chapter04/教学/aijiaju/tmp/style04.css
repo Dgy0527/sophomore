@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; outline:none; border:0;}
+body{font-family:"微软雅黑"; background:#fdfdfd;}
+/*head*/
+
+
+.daohang {
+	width: 1200px;
+	height: 600px;
+	background:url(../images/bg.png);
+	margin: 0 auto;
+}
+
+.banner {
+	width: 850px;
+	height: 50px;
+	background-color: pink;
+	margin: 0 auto;
+	padding: 50px 0 0 150px;
+	background: url(../images/logo.png) left center no-repeat;
+}
+
+
+.banner span {
+	padding: 0 30px;
+}
+
+.banner .search {
+	
+	font-size: 14px;
+	width: 200px;
+	height: 30px;
+	line-height:30px;
+	background:url(../images/f.png) left center no-repeat;
+	background-color: white;
+	border-radius: 100px;
+	float: right;
+}
+
+.news {
+	width: 1200px;
+	height: 450px;
+	margin: 20px auto;
+	background:url(../images/dongtai.jpg) center top no-repeat;
+	padding-top: 120px;
+	
+	
+}
+
+.news .one {
+	margin-left: 70px;
+	float:left;
+}
+
+
+.news .one h2 {
+	width: 280px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	padding-left: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.news .one p {
+	width: 280px;
+	height: 70px;
+	font-size: 12px;
+	color: #ccc;
+	padding-left: 10px;
+	padding-top: 10px;
+	line-height: 20px;
+}
+
+.news .one .last {
+	width: 300px;
+	height: 10px;
+	background:url(../images/yinying.jpg) no-repeat;
+}
+
+
+.shenghuo {
+	width: 1200px;
+	background-color: #d6e4ed;
+	margin: 50px auto;
+}
+
+.shenghuo .title {
+	width: 620px;
+	height: 150px;
+	margin: 0 auto;
+	background:url(../images/shenghuo.png) center center no-repeat;
+}
+
+.shenghuo .tupian {
+	width: 1000px;
+	height: 360px;
+	margin: 0 auto;
+}
+
+
+
+
+

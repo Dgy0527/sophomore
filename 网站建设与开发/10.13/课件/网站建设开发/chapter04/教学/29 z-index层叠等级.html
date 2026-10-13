@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>z-index</title>
+<style type="text/css">
+body{ margin:0px; padding:0px; font-size:18px; font-weight:bold;}
+.father{
+	margin:10px auto;
+	width:300px;
+	height:300px;
+	padding:10px;
+	background:#ccc;
+	border:1px solid #000;
+	position: absolute;
+	left: 200px;
+	top: 40px;
+}
+
+/* 增加一个兄弟元素进行对比 */
+.brother {
+    position: absolute;
+    left: 250px; /* 故意和 father 重叠 */
+    top: 90px;
+    width: 200px;
+    height: 200px;
+    background: red;
+    z-index: 50; /* 比 father 的 10 小，所以会在 father 下面 */
+}
+
+
+.father {
+	z-index: 20;
+}
+
+</style>
+</head>
+<body>
+<div class="father">
+father
+</div>
+<div class="brother">
+brother
+</div>
+</body>
+</html>
+
+
+
+
+<!--
+.child01{
+	position:absolute;         /*绝对定位*/
+	left:0px;                 /*距左边线150px*/
+	top:0px;                  /*距顶部边线100px*/
+}
+.child02{
+	position:absolute;         /*绝对定位*/
+	left:20px;                 /*距左边线150px*/
+	top:20px;                  /*距顶部边线100px*/
+}
+.child03{
+	position:absolute;         /*绝对定位*/
+	left:40px;                 /*距左边线150px*/
+	top:40px;                  /*距顶部边线100px*/
+}
+ -->
