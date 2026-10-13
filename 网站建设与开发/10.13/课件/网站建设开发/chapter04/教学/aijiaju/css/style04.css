@@ -1,9 +1,121 @@
+
 @charset "utf-8";
 /* CSS Document */
 *{margin:0; padding:0; outline:none; border:0;}
 body{font-family:"微软雅黑"; background:#fdfdfd;}
+
 /*head*/
+#bg{
+    width:1200px;
+    height:600px;
+    background:url("../images/bg.png") no-repeat;
+    margin:0 auto;
+}
+
+.nav{
+    width:850px;
+    height:50px;
+    margin:0 auto;
+    padding:50px 0 0 150px;
+    background:url("../images/logo.png") left center no-repeat;
+}
 
 
+.nav span{
+    color:#685649;
+    font-size:16px;
+    margin-left:30px;
+}
 
+.nav .search{
+    float:right;
+    width:200px;
+    height:30px;
+    line-height:30px;
+    background:url("../images/f.png") 0px center no-repeat;
+    font-size:14px;
+    padding-left:20px;
+    border-radius:100px;
+}
 
+#news{
+    width:1200px;
+    height:450px;
+    margin:0 auto;
+    background:url("../images/dongtai.jpg") center top no-repeat;
+    margin:20px auto;
+    padding-top:120px;
+}
+
+.news_content{
+    /* float:left; */
+    display:inline-block;
+    margin-left:70px;
+}
+
+.news_content .one{
+    width:280px;
+    height:50px;
+    line-height:50px;
+    font-size:16px;
+    border-bottom:1px solid #ddd;
+    font-weight:bold;
+    padding-left:10px;
+}
+
+.news_content .two{
+    width:280px;
+    height:70px;
+    font-size:12px;
+    color:#bbb;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    line-height:20px;
+}
+
+.news_content .shadow{
+    width:294px;
+    height:5px;
+    background:url("../images/yinying.jpg") no-repeat;
+}
+
+#shenghuo{
+    width:1200px;
+    height:500px;
+    background-image:radial-gradient(ellipse at center,white,#d6e4ed);
+    margin:50px auto;
+}
+
+#shenghuo h3{
+    width:640px;
+    height:150px;
+    margin:0 auto;
+    background:url("../images.shenghuo.png")center center no-repeat;
+}
+
+#shenghuo pic{
+    width:1000px;
+    height:360px;
+    margin:0 auto;
+}
+
+#shenghuo img{
+    margin-left:45px;
+}
+
+#footer{
+    width:1200px;
+    height:80px;
+    background:url("../images/footer_bg.jpg") repeat-x;
+    color:white;
+    text-align:center;
+    line-height:80px;
+    margin:0 auto;
+}
+
+#erweima{
+    position:fixed;
+    right:5%;
+    bottom:5%;
+}
