@@ -1,0 +1,35 @@
+-- 创建数据库
+CREATE DATABASE IF NOT EXISTS milk_tea DEFAULT CHARACTER SET utf8mb4;
+USE milk_tea;
+-- 1. 奶茶商品表 goods
+DROP TABLE IF EXISTS goods;
+
+CREATE TABLE goods
+(
+gid INT PRIMARY KEY AUTO_INCREMENT COMMENT '商品ID',
+gname VARCHAR(50) NOT NULL COMMENT '奶茶名称',
+price DECIMAL(5,2) COMMENT '单价',
+category VARCHAR(20)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO goods(gname,price,category) VALUES('珍珠奶茶',12.00,'奶绿'),('杨枝甘露',18.00,'果茶'),('生椰拿铁',16.00,'咖啡'),('柠檬红茶',9.00,'果茶'),('奥利奥奶盖',15.00,'奶绿'),('桂花酒酿',14.00,'奶绿'); 
+
+-- 2. 订单表 orders
+DROP TABLE IF EXISTS orders;
+CREATE TABLE orders
+(   
+oid INT PRIMARY KEY AUTO_INCREMENT COMMENT '订单ID',
+gid INT COMMENT '关联商品ID',   
+sname VARCHAR(20) COMMENT '下单学生昵称',    
+num INT COMMENT '购买数量',    
+otime DATETIME COMMENT '下单时间'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO orders(gid,sname,num,otime) 
+VALUES
+(1,'阿明',2,'2026-10-01 10:20:00'),
+(2,'小雯',1,'2026-10-01 10:30:00'),
+(2,'阿明',1,'2026-10-02 15:10:00'),
+(3,'浩子',3,'2026-10-02 16:00:00'),
+(1,'小雯',1,'2026-10-03 09:40:00'),
+(99,'阿凯',2,'2026-10-03 11:00:00');
