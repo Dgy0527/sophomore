@@ -11,11 +11,14 @@
 <body>
     <h2>注册</h2>
     <form action="" method="get">
-        用户名：<input type="text" name="username"><br>
+        用户名：<input type="text" name="username" value="123"><br>
+        <!-- value="123" :值默认被选中 -->
         密码：<input type="password" name="password"><br>
-        性别：<input type="radio" name="gender" value="男">男<input type="radio" name="gender" value="女">女<br>
-        爱好：<input type="checkbox" name="hobby[]" value="运动">运动<input type="checkbox" name="hobby[]" value="游戏">游戏<input type="checkbox" name="hobby[]" value="阅读">阅读<br>
-        <input type="submit">
+        性别：<input type="radio" name="gender" value="男">男<input type="radio" name="gender" value="女" checked>女<br>
+        爱好：<input type="checkbox" name="hobby[]" value="运动">运动<input type="checkbox" name="hobby[]" value="游戏">游戏<input type="checkbox" name="hobby[]" value="阅读" check>阅读<br>
+        <!-- `checked` :选项默认被选中 -->
+        <input type="submit" value="注册">
+        <input type="reset"
     </form>
 </body>
 </html>
