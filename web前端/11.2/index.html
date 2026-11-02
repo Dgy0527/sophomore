@@ -11,15 +11,18 @@
 <body>
     <h2>注册</h2>
     <form action="" method="get">
-        用户名：<input type="text" name="username" value="123"><br>
+        用户名：<input type="text" name="telephone" placeholder="手机号" required pattern="^[1]{1}$"><br>
         <!-- value="123" :值默认被选中 -->
-        密码：<input type="password" name="password"><br>
+        密码：<input type="password" name="password" placeholder="密码" required><br>
         性别：<input type="radio" name="gender" value="男">男<input type="radio" name="gender" value="女" checked>女<br>
         <!-- `radio` :单选按钮 -->
         爱好：<input type="checkbox" name="hobby[]" value="运动">运动<input type="checkbox" name="hobby[]" value="游戏">游戏<input type="checkbox" name="hobby[]" value="阅读" check>阅读<br>
         <!-- `checked` :选项默认被选中 -->
-         邮箱：<input type="email"><br>
-        <input type="image" value="./enter.jpg">
+        邮箱：<input type="email"><br>
+        主题颜色：<input type="color" name="color"><br>
+        年龄：<input type="number" min="1" max="120" step="5"><br>
+        出生日期：<input type="date"><br>
+        <input type="image" src="./enter.png">
         <input type="reset">
     </form>
 </body>
