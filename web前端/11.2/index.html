@@ -15,7 +15,7 @@
 <body>
     <h2>注册</h2>
     <form action="" method="get">
-        用户名：<input type="text" name="telephone" placeholder="工号" ><br>
+        用户名：<input type="text" name="telephone" placeholder="工号" value="A123"><br>
         <!-- pattern :正则匹配; [1] :匹配的数字; {1} :[]里的条件要匹配多少位 -->
         <!-- value="123" :值默认被选中 -->
         密码：<input type="password" name="password" placeholder="密码" ><br>
@@ -36,7 +36,8 @@
                 <!-- selected :默认被选中 -->
             </select><br>    
             备注信息：
-            <textarea name="remarks" id=""></textarea><br>
+            <textarea name="remarks" id="">A123</textarea><br>
+            <!-- A123 :默认值 -->
         <input type="image" src="./enter.png">
         <input type="reset">
     </form>
