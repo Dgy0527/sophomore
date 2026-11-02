@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        textarea{
+            resize:none;
+            width:300px;
+            height:400px;
+        }
     </style>
 </head>
 <body>
     <h2>注册</h2>
     <form action="" method="get">
-        用户名：<input type="text" name="telephone" placeholder="手机号" required pattern="^[1]{1}[3-9][0-9]{9}$"><br>
+        用户名：<input type="text" name="telephone" placeholder="工号" ><br>
         <!-- pattern :正则匹配; [1] :匹配的数字; {1} :[]里的条件要匹配多少位 -->
         <!-- value="123" :值默认被选中 -->
-        密码：<input type="password" name="password" placeholder="密码" required><br>
+        密码：<input type="password" name="password" placeholder="密码" ><br>
         性别：<input type="radio" name="gender" value="男">男<input type="radio" name="gender" value="女" checked>女<br>
         <!-- `radio` :单选按钮 -->
         爱好：<input type="checkbox" name="hobby[]" value="运动">运动<input type="checkbox" name="hobby[]" value="游戏">游戏<input type="checkbox" name="hobby[]" value="阅读" check>阅读<br>
@@ -23,6 +27,16 @@
         主题颜色：<input type="color" name="color"><br>
         年龄：<input type="number" min="1" max="120" step="5"><br>
         出生日期：<input type="date"><br>
+        籍贯：
+            <select name="city" id="">
+                <option value="1" selected>深圳</option>
+                <option value="2">广州</option>
+                <option value="3">东莞</option>
+                <option value="4">惠州</option>
+                <!-- selected :默认被选中 -->
+            </select><br>    
+            备注信息：
+            <textarea name="remarks" id=""></textarea><br>
         <input type="image" src="./enter.png">
         <input type="reset">
     </form>
