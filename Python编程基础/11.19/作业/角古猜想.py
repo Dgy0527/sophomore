@@ -8,4 +8,19 @@ def jiaogu(n):
     count = 0
     while n != 1:
         if n % 2 == 0:
-            n=
+            n = n // 2
+        else:
+            n = 3 * n + 1
+        count += 1
+    return count
+
+if __name__ == "__main__":
+    try:
+        num = int(input("请输入一个正整数："))
+        if num < 0:
+            print("请输入大于0的正整数")
+        else:
+            res = jiaogu(num)
+            print(f"一共需要 {res} 次运算得到1")
+    except ValueError:
+        print("输入错误,请输入整数")
