@@ -1,3 +1,8 @@
+# 题目
+"""
+使用函数的方法，编写程序统计用户输入分数的平均分（去掉最高分，去掉最低分，然后取平均分）
+"""
+
 def get_average(scores):
     score_list=scores.copy()
     max_score=max(score_list)
