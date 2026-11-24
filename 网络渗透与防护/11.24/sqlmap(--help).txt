@@ -1,0 +1,160 @@
+用法：sqlmap.py [选项]
+
+选项：
+  -h, --help            查看基础帮助，然后退出
+  -hh                   查看完整高级帮助
+  --version             查看sqlmap版本
+  -v 数字               输出详细等级：0~6，默认1（数字越大，打印越多payload）
+
+==================== 目标（必须选一个指定目标） ====================
+  -u 网址, --url=网址   目标URL（例子："http://xxx/vuln.php?id=1"）
+  -g                    谷歌dork批量扫描（刷题基本不用）
+
+==================== 请求包相关 ====================
+  --data=数据           POST提交的表单数据（例子："id=1"）
+  --cookie=Cookie值     设置Cookie（比如PHPSESSID，登录后注入用）
+  --random-agent        随机User-Agent，防止被WAF识别
+  --proxy=代理地址       使用代理（burp抓包配合用）
+  --tor                 使用tor匿名网络（刷题不用）
+  --check-tor           检查tor是否正常
+
+==================== 注入相关 ====================
+  -p 参数名             指定只测某个参数（比如 -p id，只测id）
+  --dbms=数据库类型     强制指定数据库，比如mysql，减少测试时间
+
+==================== 探测等级 ====================
+  --level=等级          测试级别 1~5，默认1；越高测的越全、越慢
+  --risk=风险等级       风险 1~3，默认1；3容易删数据，刷题只用1
+
+==================== 注入技术（重点！） ====================
+  --technique=字母      指定注入方式，默认 BEUSTQ
+    B = 布尔盲注
+    E = 报错注入
+    U = 联合查询注入
+    S = 堆叠注入
+    T = 时间盲注
+    Q = 内联查询注入
+
+==================== 信息查询（刷题最常用） ====================
+  -a, --all             一次性拿全部信息（库、表、字段、数据）
+  -b, --banner          获取数据库版本信息
+  --current-user        查询当前数据库账号
+  --current-db          查询当前正在使用的数据库
+  --passwords           导出数据库账号密码哈希
+  --dbs                 列出所有数据库
+  --tables              列出指定库里面的所有表
+  --columns             列出指定表里的所有字段
+  --schema              导出库结构
+  --dump                导出表里面的数据（脱库）
+  --dump-all            导出全部库所有表数据
+  -D 库名               指定数据库（搭配--tables、--columns）
+  -T 表名               指定数据表
+  -C 字段名             指定字段
+
+==================== 拿系统shell（提权用） ====================
+  --os-shell            获取交互式系统命令shell
+  --os-pwn              拿到meterpreter反弹shell（红队用）
+
+==================== 通用设置（你刚才一直在用 --batch） ====================
+  --batch               全程自动确认，全部提问默认y/n，不用手动输入
+  --flush-session       清空这个目标的缓存记录（重新从头测，不会读旧结果）
+
+==================== 其他 ====================
+  --wizard              新手向导模式，一步步引导
+
+
+
+"""
+原文
+sqlmap.py --help
+        ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.10#stable}
+|_ -| . [)]     | .'| . |
+|___|_  [(]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+Usage: sqlmap.py [options]
+
+Options:
+  -h, --help            Show basic help message and exit
+  -hh                   Show advanced help message and exit
+  --version             Show program's version number and exit
+  -v VERBOSE            Verbosity level: 0-6 (default 1)
+
+  Target:
+    At least one of these options has to be provided to define the
+    target(s)
+
+    -u URL, --url=URL   Target URL (e.g. "http://www.site.com/vuln.php?id=1")
+    -g GOOGLEDORK       Process Google dork results as target URLs
+
+  Request:
+    These options can be used to specify how to connect to the target URL
+
+    --data=DATA         Data string to be sent through POST (e.g. "id=1")
+    --cookie=COOKIE     HTTP Cookie header value (e.g. "PHPSESSID=a8d127e..")
+    --random-agent      Use randomly selected HTTP User-Agent header value
+    --proxy=PROXY       Use a proxy to connect to the target URL
+    --tor               Use Tor anonymity network
+    --check-tor         Check to see if Tor is used properly
+
+  Injection:
+    These options can be used to specify which parameters to test for,
+    provide custom injection payloads and optional tampering scripts
+
+    -p TESTPARAMETER    Testable parameter(s)
+    --dbms=DBMS         Force back-end DBMS to provided value
+
+  Detection:
+    These options can be used to customize the detection phase
+
+    --level=LEVEL       Level of tests to perform (1-5, default 1)
+    --risk=RISK         Risk of tests to perform (1-3, default 1)
+
+  Techniques:
+    These options can be used to tweak testing of specific SQL injection
+    techniques
+
+    --technique=TECH..  SQL injection techniques to use (default "BEUSTQ")
+
+  Enumeration:
+    These options can be used to enumerate the back-end database
+    management system information, structure and data contained in the
+    tables
+
+    -a, --all           Retrieve everything
+    -b, --banner        Retrieve DBMS banner
+    --current-user      Retrieve DBMS current user
+    --current-db        Retrieve DBMS current database
+    --passwords         Enumerate DBMS users password hashes
+    --dbs               Enumerate DBMS databases
+    --tables            Enumerate DBMS database tables
+    --columns           Enumerate DBMS database table columns
+    --schema            Enumerate DBMS schema
+    --dump              Dump DBMS database table entries
+    --dump-all          Dump all DBMS databases tables entries
+    -D DB               DBMS database to enumerate
+    -T TBL              DBMS database table(s) to enumerate
+    -C COL              DBMS database table column(s) to enumerate
+
+  Operating system access:
+    These options can be used to access the back-end database management
+    system underlying operating system
+
+    --os-shell          Prompt for an interactive operating system shell
+    --os-pwn            Prompt for an OOB shell, Meterpreter or VNC
+
+  General:
+    These options can be used to set some general working parameters
+
+    --batch             Never ask for user input, use the default behavior
+    --flush-session     Flush session files for current target
+
+  Miscellaneous:
+    These options do not fit into any other category
+
+    --wizard            Simple wizard interface for beginner users
+
+Press Enter to continue...
+"""
